@@ -1,0 +1,20 @@
+do 
+$$
+
+declare 
+val int:=45;
+
+begin
+
+if val>0 and val<20 then
+raise notice 'your num is % and its below 10',val;
+
+elsif val>=20 and val<=50 then
+raise notice 'your num is % and below half century',val;
+
+else raise notice 'num is %,close to century',val;
+
+end if;
+
+end;
+$$
