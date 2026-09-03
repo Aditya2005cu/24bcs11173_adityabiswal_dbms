@@ -1,0 +1,39 @@
+-- PRODUCTS & ORDER DETAILS
+CREATE TABLE products (
+    productid SERIAL PRIMARY KEY,
+    productname VARCHAR(100),
+    category VARCHAR(50)
+);
+
+CREATE TABLE order_details (
+    orderid SERIAL PRIMARY KEY,
+    productid INT REFERENCES products(productid),
+    quantity INT
+);
+
+INSERT INTO products (productname, category) VALUES
+('Laptop', 'Electronics'),
+('Smartphone', 'Electronics'),
+('Desk Chair', 'Furniture'),
+('Notebook', 'Stationery'),
+('Pen', 'Stationery'),
+('Headphones', 'Electronics');
+
+INSERT INTO order_details (productid, quantity) VALUES
+(1, 5),   -- Laptop ordered
+(2, 10),  -- Smartphone ordered
+(4, 20);  -- Notebook ordered
+
+
+-- VIEW FOR UNSOLD ITEMS (safe version using NOT EXISTS)
+CREATE VIEW Unsold_Items AS
+SELECT p.productname, p.category
+FROM products p
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM order_details od
+    WHERE od.productid = p.productid
+);
+
+SELECT * FROM Unsold_Items;
+
