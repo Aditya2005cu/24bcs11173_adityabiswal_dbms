@@ -1,0 +1,36 @@
+CREATE TABLE Orders (
+    OrderID NUMBER PRIMARY KEY,
+    CustomerName VARCHAR2(50),
+    Amount NUMBER(10,2),
+    OrderDate DATE
+);
+
+INSERT INTO Orders VALUES (101, 'Rahul', 5000, SYSDATE);
+INSERT INTO Orders VALUES (102, 'Priya', 15000, SYSDATE);
+INSERT INTO Orders VALUES (103, 'Aman', 8000, SYSDATE);
+INSERT INTO Orders VALUES (104, 'Neha', 25000, SYSDATE);
+INSERT INTO Orders VALUES (105, 'Arjun', 12000, SYSDATE);
+INSERT INTO Orders VALUES (106, 'Karan', 7000, SYSDATE);
+INSERT INTO Orders VALUES (107, 'Simran', 18000, SYSDATE);
+
+COMMIT;
+
+SET SERVEROUTPUT ON;
+
+DECLARE
+    CURSOR c_orders IS
+        SELECT OrderID, Amount
+        FROM Orders;
+
+BEGIN
+    FOR ord IN c_orders LOOP
+
+        IF ord.Amount > 10000 THEN
+            DBMS_OUTPUT.PUT_LINE(
+                'Order ' || ord.OrderID || ' - High Value'
+            );
+        END IF;
+
+    END LOOP;
+END;
+/
