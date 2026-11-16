@@ -1,0 +1,411 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #1e293b;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 8%;
+  background: white;
+}
+
+.navbar h2 {
+  color: #2563eb;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #334155;
+  font-weight: 600;
+}
+
+.hero {
+  background: #1e40af;
+  color: white;
+  text-align: center;
+  padding: 110px 20px;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.tracking-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.tracking-box input {
+  flex: 1;
+  padding: 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.tracking-box button {
+  padding: 16px 25px;
+  border: none;
+  border-radius: 6px;
+  background: #f59e0b;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.features {
+  padding: 65px 8%;
+  text-align: center;
+}
+
+.features h2 {
+  margin-bottom: 40px;
+}
+
+.feature-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.feature-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 10px;
+  flex: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.feature-card h3 {
+  color: #2563eb;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  color: #64748b;
+  line-height: 1.5;
+}
+
+footer {
+  background: #172554;
+  color: white;
+  text-align: center;
+  padding: 22px;
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .tracking-box {
+    flex-direction: column;
+  }
+
+  .feature-container {
+    flex-direction: column;
+  }
+}
+
+
+.result-section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.result-section h2 {
+  margin: 30px 0 20px;
+  color: #1e40af;
+}
+
+.shipment-card,
+.history-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.shipment-card p {
+  margin: 15px 0;
+  line-height: 1.5;
+}
+
+.shipment-card strong {
+  display: inline-block;
+  width: 180px;
+}
+
+.status {
+  color: #2563eb;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.history-item {
+  border-left: 4px solid #2563eb;
+  padding: 15px;
+  margin-bottom: 20px;
+  background: #f5f7fb;
+}
+
+.history-item h3 {
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+.history-item p {
+  margin: 7px 0;
+}
+
+.history-item small {
+  color: #64748b;
+}
+
+.error-message {
+  text-align: center;
+  color: #dc2626;
+  margin: 25px;
+  font-weight: bold;
+}
+
+
+
+
+.add-shipment {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 35px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.add-shipment h2 {
+  text-align: center;
+  color: #1e40af;
+  margin-bottom: 30px;
+}
+
+.add-shipment h3 {
+  margin: 25px 0 15px;
+  color: #2563eb;
+}
+
+.add-shipment input,
+.add-shipment textarea {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+}
+
+.add-shipment textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.add-shipment button {
+  width: 100%;
+  padding: 14px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-shipment button:hover {
+  background: #1e40af;
+}
+
+.booking-message {
+  margin-top: 20px;
+  padding: 15px;
+  background: #eff6ff;
+  border-radius: 6px;
+  text-align: center;
+  color: #1e40af;
+  overflow-wrap: anywhere;
+}
+
+
+
+.add-shipment select {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 15px;
+  background: white;
+}
+
+
+
+.all-shipments {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 25px;
+  text-align: center;
+}
+
+.all-shipments h2 {
+  color: #1e40af;
+  margin-bottom: 25px;
+}
+
+.all-shipments button {
+  padding: 13px 25px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.all-shipments table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.all-shipments th,
+.all-shipments td {
+  padding: 15px;
+  border: 1px solid #e2e8f0;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.all-shipments th {
+  background: #1e40af;
+  color: white;
+}
+
+.all-shipments tr:nth-child(even) {
+  background: #f1f5f9;
+}
+
+
+.delete-btn {
+  background: #dc2626 !important;
+  color: white;
+  padding: 8px 14px !important;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 !important;
+}
+
+.delete-btn:hover {
+  background: #991b1b !important;
+}
+
+
+
+.dashboard {
+  padding: 40px 8%;
+  background: #f5f7fb;
+}
+
+.dashboard h2 {
+  color: #1e40af;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.dashboard-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.dashboard-card {
+  background: white;
+  padding: 25px 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  border-top: 4px solid #2563eb;
+}
+
+.dashboard-card h3 {
+  font-size: 15px;
+  color: #64748b;
+  margin-bottom: 15px;
+}
+
+.dashboard-card p {
+  font-size: 30px;
+  font-weight: bold;
+  color: #1e40af;
+}
+
+
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.nav-links {
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.nav-links a {
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
